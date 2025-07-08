@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\LoginHashSalt\\LoginHashSalt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|c:\\loginhashsalt\\loginhashsalt\\loginhashsalt\\views\\conta\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|solutionrelative:loginhashsalt\\views\\conta\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|c:\\loginhashsalt\\loginhashsalt\\loginhashsalt\\views\\conta\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|solutionrelative:loginhashsalt\\views\\conta\\cadastro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|c:\\loginhashsalt\\loginhashsalt\\loginhashsalt\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|solutionrelative:loginhashsalt\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|c:\\loginhashsalt\\loginhashsalt\\loginhashsalt\\controllers\\contacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|solutionrelative:loginhashsalt\\service\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|c:\\loginhashsalt\\loginhashsalt\\loginhashsalt\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|solutionrelative:loginhashsalt\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|c:\\loginhashsalt\\loginhashsalt\\loginhashsalt\\data\\logindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E260D8B9-FFDC-4A13-9582-E2B08871C852}|LoginHashSalt\\LoginHashSalt.csproj|solutionrelative:loginhashsalt\\data\\logindbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,40 +43,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Views\\Conta\\Login.cshtml",
-              "RelativeDocumentMoniker": "LoginHashSalt\\Views\\Conta\\Login.cshtml",
-              "ToolTip": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Views\\Conta\\Login.cshtml",
-              "RelativeToolTip": "LoginHashSalt\\Views\\Conta\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T14:47:03.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Cadastro.cshtml",
               "DocumentMoniker": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Views\\Conta\\Cadastro.cshtml",
               "RelativeDocumentMoniker": "LoginHashSalt\\Views\\Conta\\Cadastro.cshtml",
               "ToolTip": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Views\\Conta\\Cadastro.cshtml",
               "RelativeToolTip": "LoginHashSalt\\Views\\Conta\\Cadastro.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-08T14:46:28.754Z",
+              "WhenOpened": "2025-07-08T19:01:10.72Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContaController.cs",
-              "DocumentMoniker": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Controllers\\ContaController.cs",
-              "RelativeDocumentMoniker": "LoginHashSalt\\Controllers\\ContaController.cs",
-              "ToolTip": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Controllers\\ContaController.cs",
-              "RelativeToolTip": "LoginHashSalt\\Controllers\\ContaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "LoginDbContext.cs",
+              "DocumentMoniker": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Data\\LoginDbContext.cs",
+              "RelativeDocumentMoniker": "LoginHashSalt\\Data\\LoginDbContext.cs",
+              "ToolTip": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Data\\LoginDbContext.cs",
+              "RelativeToolTip": "LoginHashSalt\\Data\\LoginDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T14:14:05.876Z",
+              "WhenOpened": "2025-07-08T18:10:18.655Z",
               "EditorCaption": ""
             },
             {
@@ -87,22 +74,35 @@
               "RelativeDocumentMoniker": "LoginHashSalt\\Service\\UsuarioService.cs",
               "ToolTip": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Service\\UsuarioService.cs",
               "RelativeToolTip": "LoginHashSalt\\Service\\UsuarioService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwCkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwDYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T13:52:17.244Z",
+              "WhenOpened": "2025-07-08T17:59:23.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "ContaController.cs",
+              "DocumentMoniker": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Controllers\\ContaController.cs",
+              "RelativeDocumentMoniker": "LoginHashSalt\\Controllers\\ContaController.cs",
+              "ToolTip": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Controllers\\ContaController.cs",
+              "RelativeToolTip": "LoginHashSalt\\Controllers\\ContaController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T17:58:30.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "LoginHashSalt\\Models\\Usuario.cs",
               "ToolTip": "C:\\LoginHashSalt\\LoginHashSalt\\LoginHashSalt\\Models\\Usuario.cs",
               "RelativeToolTip": "LoginHashSalt\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-08T13:46:14.837Z",
+              "WhenOpened": "2025-07-08T17:55:22.37Z",
               "EditorCaption": ""
             }
           ]

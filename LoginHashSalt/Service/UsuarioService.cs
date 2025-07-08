@@ -1,57 +1,67 @@
-﻿using LoginHashSalt.Models;
+﻿using LoginHashSalt.Data;
+using LoginHashSalt.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace LoginHashSalt.Service
 {
     public class UsuarioService
     {
-        private List<Usuario> Usuarios = new List<Usuario>();
+        private readonly LoginDbContext _context;
 
-        public byte[] GerarSalt()
+        public UsuarioService(LoginDbContext context)
         {
-            var salt = new byte[16];
-            using (var rng = new System.Security.Cryptography.RNGCryptoServiceProvider())
-            {
-                rng.GetBytes(salt);
-            }
-            return salt;
+            _context = context;
         }
 
-        public byte[] GerarHash(string senha, byte[] salt)
+        public string GerarSalt()
         {
-            using (var pbkdf2 = new System.Security.Cryptography.Rfc2898DeriveBytes(senha, salt, 10000))
+            var saltBytes = new byte[16];
+            using (var rng = new RNGCryptoServiceProvider())
             {
-                return pbkdf2.GetBytes(2);
+                rng.GetBytes(saltBytes);
+            }
+            return Convert.ToBase64String(saltBytes);
+        }
+
+        public string GerarHash(string senha, string salt)
+        {
+            using (var sha256 = SHA256.Create())
+            {
+                var combined = Encoding.UTF8.GetBytes(senha + salt);
+                var hash = sha256.ComputeHash(combined);
+                return Convert.ToBase64String(hash);
             }
         }
 
-        public Usuario Cadastrar(string email, string senha)
+        public Usuario Cadastrar(string nome, string email, string senha)
         {
             var salt = GerarSalt();
             var hash = GerarHash(senha, salt);
 
             var usuario = new Usuario
             {
+                Nome = nome,
                 Email = email,
                 Salt = salt,
-                HashSenha = hash
+                SenhaHash = hash
             };
 
-            Usuarios.Add(usuario);
+            _context.Usuarios.Add(usuario);
+            _context.SaveChanges();
             return usuario;
         }
 
         public bool VerificarSenha(string email, string senhaDigitada)
         {
-            var usuario = Usuarios.FirstOrDefault(u => u.Email == email);
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.Email == email);
             if (usuario == null)
                 return false;
 
-            var hasDigitado = GerarHash(senhaDigitada, usuario.Salt);
-            return hasDigitado.SequenceEqual(usuario.HashSenha);
+            var hashDigitado = GerarHash(senhaDigitada, usuario.Salt);
+            return hashDigitado == usuario.SenhaHash;
         }
     }
 }

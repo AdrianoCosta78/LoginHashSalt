@@ -1,5 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using LoginHashSalt.Data;
 using LoginHashSalt.Service;
+using System.Web.Mvc;
 
 namespace LoginHashSalt.Controllers
 {
@@ -9,7 +10,8 @@ namespace LoginHashSalt.Controllers
 
         public ContaController()
         {
-            _usuarioService = new UsuarioService();
+            var context = new LoginDbContext();
+            _usuarioService = new UsuarioService(context);
         }
 
         public ActionResult Cadastro()
@@ -18,9 +20,9 @@ namespace LoginHashSalt.Controllers
         }
 
         [HttpPost]
-        public ActionResult Cadastro(string email, string senha)
+        public ActionResult Cadastro(string nome, string email, string senha)
         {
-            _usuarioService.Cadastrar(email, senha);
+            _usuarioService.Cadastrar(nome, email, senha);
             ViewBag.Mensagem = "Usuário cadastrado com sucesso!";
             return View();
         }
