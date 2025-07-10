@@ -14,5 +14,6 @@ namespace LoginHashSalt.Models
         public string Email { get; set; }
         public string SenhaHash { get; set; }
         public string Salt { get; set; }
+        public string TokenRecuperacao { get; set; }
     }
 }

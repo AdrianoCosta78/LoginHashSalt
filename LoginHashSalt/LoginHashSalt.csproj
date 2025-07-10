@@ -340,6 +340,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Conta\Cadastro.cshtml" />
     <Content Include="Views\Conta\Login.cshtml" />
+    <Content Include="Views\Conta\AreaUsuario.cshtml" />
+    <Content Include="Views\Conta\EsqueciSenha.cshtml" />
+    <Content Include="Views\Conta\RedefinirSenha.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

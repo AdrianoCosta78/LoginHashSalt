@@ -4,6 +4,9 @@ using System;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Net;
+using System.Net.Mail;
+using System.Web.Services.Description;
 
 namespace LoginHashSalt.Service
 {
@@ -63,5 +66,55 @@ namespace LoginHashSalt.Service
             var hashDigitado = GerarHash(senhaDigitada, usuario.Salt);
             return hashDigitado == usuario.SenhaHash;
         }
+        public Usuario GerarTokenRecuperacao(string email) 
+        { 
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.Email == email);
+            if(usuario == null)
+                return null;
+
+            usuario.TokenRecuperacao = Guid.NewGuid().ToString();   
+            _context.SaveChanges();
+            return usuario;
+        }
+        public void EnviarEmail(string para, string assunto, string corpo)
+        {
+            //System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            // 1) Configura o SMTP do Mailtrap
+            var smtp = new SmtpClient("sandbox.smtp.mailtrap.io", 2525)
+            {
+                Credentials = new NetworkCredential("email", "senha"),
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                Timeout = 10000    // opcional, 10s
+            };
+
+            // 2) Cria a mensagem passo a passo
+            var mail = new MailMessage()
+            {
+                From = new MailAddress("no-reply@seuprojeto.com", "Seu Projeto"),
+                Subject = assunto,
+                Body = corpo,
+                IsBodyHtml = true
+            };
+
+            // Define o remetente como MailAddress
+            
+            // Adiciona o destinatário
+            mail.To.Add(para);
+
+            // 3) Envia
+            smtp.Send(mail);
+        }
+        public Usuario BuscarPorToken(string token)
+        {
+            return _context.Usuarios.FirstOrDefault(u => u.TokenRecuperacao == token);
+        }
+
+        public void AtualizarUsuario(Usuario usuario)
+        {
+            _context.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
+            _context.SaveChanges();
+        }
+
     }
 }
